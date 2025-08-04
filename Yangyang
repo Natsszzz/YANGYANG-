@@ -1,10 +1,19 @@
-#include <iostream>   //(Input/Output)
-#include <direct.h>   //(Directory operations in Windows)
-#include <filesystem> //(C++17, cross-platform directory handling)
-#include <string>     //(String manipulation)
-
+#include <iostream>
+#include <direct.h>
+#include <string>
 using namespace std;
 
-int main() {
+void mainMenu() {
+   
+    cout << "===== Directory Management System =====" << endl;
+    cout << "[1] List Files" << endl;
+    cout << "[2] Create Directory" << endl;
+    cout << "[3] Change Directory" << endl;
+    cout << "[4] Exit" << endl;
+    cout << "\nEnter your choice: ";
+}
 
-cout <<
+Void listFilesSubmenu() {
+  int choice;
+  string  filter;
+
