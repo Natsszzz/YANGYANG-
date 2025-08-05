@@ -22,4 +22,51 @@ void listFiles() {
     cin.ignore();
     cin.get();
 }
-   
+
+void createDirectory() {
+    string dirName;
+    cout << "Enter directory name: ";
+    cin >> dirName;
+    
+    if (mkdir(dirName.c_str()) == 0)
+        cout << "Directory created!" << endl;
+    else
+        cout << "Error creating directory already exists!" << endl;
+    
+    cout << "Press Enter to continue...";
+    cin.ignore();
+    cin.get();
+}
+
+void changeDirectory() {
+    int choice;
+    string dirPath;
+    cout << "\n1. Parent\n2. Root\n3. Custom Path\nChoice: ";
+    cin >> choice;
+    
+    if (choice == 1) {
+        if (chdir("..") == 0)
+            cout << "Moved to parent!" << endl;
+        else
+            cout << "Parent move failed!" << endl;
+    } else if (choice == 2) {
+        if (chdir("C:\\") == 0)
+            cout << "Moved to C:\\" << endl;
+        else
+            cout << "Root move failed!" << endl;
+    } else if (choice == 3) {
+        cout << "Path: ";
+        cin.ignore();
+        getline(cin, dirPath);
+        if (chdir(dirPath.c_str()) == 0)
+            cout << "Moved to " << dirPath << endl;
+        else
+            cout << "Path not found!" << endl;
+    } else {
+        cout << "Invalid choice!";
+    }
+    
+    cout << "\nPress Enter...";
+    cin.ignore();
+    cin.get();
+}
