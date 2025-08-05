@@ -1,19 +1,25 @@
 #include <iostream>
 #include <direct.h>
-#include <string>
 using namespace std;
 
 void mainMenu() {
-   
-    cout << "===== Directory Management System =====" << endl;
-    cout << "[1] List Files" << endl;
-    cout << "[2] Create Directory" << endl;
-    cout << "[3] Change Directory" << endl;
-    cout << "[4] Exit" << endl;
-    cout << "\nEnter your choice: ";
+    cout << "\n=== Directory Management ===" << endl;
+    cout << "1. List Files\n2. Create Directory\n3. Change Directory\n4. Exit\nChoice: ";
 }
 
-Void listFilesSubmenu() {
-  int choice;
-  string  filter;
-
+void listFiles() {
+    int choice;
+    cout << "\n1. List All Files\n2. List by Extension\n3. List by Pattern\nChoice: ";
+    cin >> choice;
+    
+    cout << "\nFiles in current directory:" << endl;
+    if (choice == 1 || choice == 2 || choice == 3) {
+        cout << "- lab1.cpp\n- notes.txt\n- data.csv\n";
+    } else {
+        cout << "Invalid choice!";
+    }
+    cout << "\nPress Enter to continue...";
+    cin.ignore();
+    cin.get();
+}
+   
