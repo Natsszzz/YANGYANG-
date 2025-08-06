@@ -41,7 +41,7 @@ void createDirectory() {
 void changeDirectory() {
     int choice;
     string dirPath;
-    cout << "\n1. Parent\n2. Root\n3. Custom Path\nChoice: ";
+    cout << "\n1. Move to Parent\n2. Move to Root\n3. Enter Custom Path\nChoice: ";
     cin >> choice;
     
     if (choice == 1) {
