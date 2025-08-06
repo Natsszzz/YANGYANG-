@@ -70,3 +70,22 @@ void changeDirectory() {
     cin.ignore();
     cin.get();
 }
+
+int main() {
+    int choice;
+    while (true) {
+        mainMenu();
+        cin >> choice;
+        
+        switch (choice) {
+            case 1: listFiles(); break;
+            case 2: createDirectory(); break;
+            case 3: changeDirectory(); break;
+            case 4: cout << "Goodbye!" << endl; return 0;
+            default: 
+                cout << "Invalid choice!\nPress Enter to continue...";
+                cin.ignore();
+                cin.get();
+        }
+    }
+}
