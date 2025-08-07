@@ -50,8 +50,8 @@ void changeDirectory() {
         else
             cout << "Parent move failed!" << endl;
     } else if (choice == 2) {
-        if (chdir("C:\\") == 0)
-            cout << "Moved to C:\\" << endl;
+        if (chdir("\\") == 0)
+            cout << "Moved to root!" << endl;
         else
             cout << "Root move failed!" << endl;
     } else if (choice == 3) {
@@ -59,14 +59,14 @@ void changeDirectory() {
         cin.ignore();
         getline(cin, dirPath);
         if (chdir(dirPath.c_str()) == 0)
-            cout << "Moved to " << dirPath << endl;
+            cout << "Current directory changed to: " << dirPath << endl; 
         else
             cout << "Path not found!" << endl;
     } else {
         cout << "Invalid choice!";
     }
     
-    cout << "\nPress Enter to continue...";
+    cout << "\nPress Enter continue...";
     cin.ignore();
     cin.get();
 }
